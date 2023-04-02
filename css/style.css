@@ -1,0 +1,86 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Gruppo', cursive;
+}
+
+body {
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: rgb(236, 236, 236);
+}
+
+.container {
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+.container-const,
+.container-active {
+	display: flex;
+	width: 1100px;
+	justify-content: center;
+	margin-bottom: 40px;
+	position: relative;
+}
+
+.container-const__logo {
+	height: 180px;
+	width: 180px;
+	background-image: url('/img/myLogo.png');
+	background-position: center;
+	background-size: cover;
+}
+
+.container-const__title {
+	font-size: 100px;
+	align-self: center;
+	padding-left: 40px;
+}
+
+.container-active__select,
+.container-active__button,
+.container-active__input,
+.container-active__output {
+	font-size: 24px;
+	padding: 10px 20px;
+	color: black;
+	border: 1px solid black;
+	border-radius: 5px;
+	margin-left: 2px;
+}
+
+.container-active__input,
+.container-active__output {
+	width: 220px;
+}
+
+option {
+	margin: initial;
+}
+
+.container-active__alert {
+	display: none;
+	color: red;
+	position: absolute;
+	top: 100%;
+	left: 19.5%;
+}
+
+.container-active__button {
+	background-color: rgb(188, 188, 188);
+	margin-left: 30px;
+}
+
+.container-active__button:hover {
+	transition: 0.5s;
+	background-color: black;
+	color: rgb(236, 236, 236);
+}

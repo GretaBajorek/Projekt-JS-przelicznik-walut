@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Przelicznik walut</title>
+        <link href="/css/reset.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Gruppo&display=swap" rel="stylesheet">
+        <link href="/css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="container-const">
+                <div class="container-const__logo"></div>
+                <h1 class="container-const__title">Przelicznik walut</h1>
+            </div>
+            <div class="container-active">
+                <input class="container-active__input" placeholder="wpisz liczbę"></input>
+                <h2 class="container-active__alert">Wpisz liczbę!</h2>
+                <select class="container-active__select">
+                    <option value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                    <option value="CHF">CHF</option>
+                </select>
+                <button class="container-active__button">Przelicz</button>
+                <p class="container-active__output"></p>
+            </div>
+        </div>
+        <script defer src="/js/index.js"></script>
+    </body>
+
+</html>
