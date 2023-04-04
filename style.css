@@ -44,26 +44,25 @@ body {
 	align-self: center;
 	padding-left: 40px;
 }
-
 .container-active__select,
 .container-active__button,
 .container-active__input,
 .container-active__output {
 	font-size: 24px;
-	padding: 10px 20px;
+	padding: 10px 15px;
 	color: black;
 	border: 1px solid black;
 	border-radius: 5px;
 	margin-left: 2px;
 }
 
+.container-active__select {
+	padding: 0px 10px;
+}
+
 .container-active__input,
 .container-active__output {
 	width: 220px;
-}
-
-option {
-	margin: initial;
 }
 
 .container-active__alert {
