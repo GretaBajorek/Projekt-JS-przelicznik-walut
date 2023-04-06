@@ -1,8 +1,9 @@
 'use strict'
 
-const button = document.querySelector('button')
-const output = document.querySelector('p')
-const input = document.querySelector('input')
+const button = document.querySelector('.container-active__button')
+const output = document.querySelector('.container-active__output')
+const input = document.querySelector('.container-active__input')
+const message = document.querySelector('.container-active__alert')
 
 const convertCurrency = () => {
 	const select = document.querySelector('select')
@@ -10,15 +11,19 @@ const convertCurrency = () => {
 		.then(response => response.json())
 		.then(data => {
 			const conversion = (data.rates[0].mid * Number(input.value)).toFixed(2)
-			output.innerHTML = `to <span style='font-weight: bold;'>${conversion}</span> PLN`
+			output.innerHTML = `to <span>${conversion}</span> PLN`
 		})
-		.catch(e => console.error(e))
+		.catch(e => alert('W tej chwili nie możemy przeliczyć kwoty, spróbuj później'))
 }
+
 button.addEventListener('click', () => {
 	if (input.value === 'e' || input.value <= 0) {
-		const message = document.querySelector('h2')
 		message.style.display = 'block'
 		return
 	}
 	convertCurrency()
+})
+
+input.addEventListener('input', () => {
+	message.style.display = 'none'
 })
